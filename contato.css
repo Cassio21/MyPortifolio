@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-image: url('../img/fundo-portfolio.jpg');
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.navigation {
+  background-color: #3a7db0;
+  color: #fff;
+
+  animation-name: nav;
+  animation-duration: 4s;
+}
+
+.navigation .threeline-icon {
+  display: none;
+}
+
+.navigation ul {
+  list-style: none;
+  text-align: center;
+  align-items: center;
+  letter-spacing: 1.2rem;
+}
+
+.navigation li {
+  display: inline-block;
+  margin: 1.4rem;
+  font-size: 16.5px;
+  font-weight: 100;
+}
+
+.link {
+  position: relative;
+  opacity: 1;
+  transition: opacity 0.6s;
+  color: #fff;
+  text-decoration: none;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #93dd93;
+  transition: width 0.6s;
+}
+
+.link:hover {
+  opacity: 0.9;
+  color: #f8ca6d;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.back {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 3.125rem 31.25rem 0 30.375rem;
+}
+
+.back:hover {
+  background-color: #9eff9e;
+  color: #000;
+  border-radius: 10px;
+  opacity: 5.5;
+  transition: 0.8s;
+}
+
+.main {
+  padding: 5rem 11.25rem 5rem 6.25rem;
+
+  animation-name: conteudo;
+  animation-duration: 2s;
+}
+
+.main h1 {
+  font-weight: normal;
+  color: #fff;
+}
+
+.main h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 0.1rem;
+  margin: 1.5rem 0;
+}
+
+.main h3 {
+  color: #f8ca6d;
+  font-size: 0.875em;
+  line-height: 1.5em;
+  border-bottom: solid thin #fff;
+  width: fit-content;
+  padding-top: 18px;
+
+  position: relative;
+  text-transform: uppercase;
+}
+
+.main p {
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 100;
+  line-height: 2rem;
+  text-align: justify;
+}
+
+.caminho {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #66635b;
+}
+
+.caminho li {
+  font-size: 1.125em;
+  font-weight: 100;
+  color: #fff;
+  margin: 1rem 0;
+}
+
+.social-img {
+  width: 3rem;
+  margin: 1rem 0.2rem 0 0;
+}
+
+.social-img:hover {
+  transform: scale(1.3);
+  transition: 0.6s;
+}
+
+.redes {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  color: #fff;
+}
+
+/*//* ANIMAÇÕES */
+@keyframes nav {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes conteudo {
+  0% {
+    opacity: 0;
+    transform: translate(-20px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(20px, 0);
+  }
+}
+
+/* ? Responsividade */
+
+/* * 1024px */
+@media screen and (max-width: 1024px) {
+  .main {
+    padding: 5rem 11.25rem 5rem 6.25rem;
+  }
+
+  .back {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0 15.25rem 0 13.375rem;
+  }
+
+  .back:hover {
+    background-color: #9eff9e;
+    color: #000;
+    border-radius: 10px;
+    opacity: 5.5;
+    transition: 0.8s;
+  }
+}
+
+/* * 1000px */
+@media screen and (max-width: 1000px) {
+  .navigation li {
+    display: none;
+  }
+
+  .navigation .threeline-icon {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem 0 0.5rem 0;
+    margin-top: 0;
+  }
+
+  .caminho li {
+    font-size: 0.875em !important ;
+  }
+
+  .main {
+    padding: 3.6rem 5% 2.5rem 5%;
+  }
+
+  .back {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0 15.25rem 0 13.375rem;
+  }
+
+  .back:hover {
+    background-color: #9eff9e;
+    color: #000;
+    border-radius: 10px;
+    opacity: 5.5;
+    transition: 0.8s;
+  }
+}
+
+/* * 890px */
+@media screen and (max-width: 850px) and (min-width: 412px) {
+  .back {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0 4.25rem 0 4.25rem;
+  }
+
+  .back:hover {
+    background-color: #9eff9e;
+    color: #000;
+    border-radius: 10px;
+    opacity: 5.5;
+    transition: 0.8s;
+  }
+}
+
+/* * 412px */
+@media screen and (max-width: 400px) and (min-width: 310px) {
+  .back {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0 2.25rem 0 2.25rem;
+  }
+
+  .back:hover {
+    background-color: #9eff9e;
+    color: #000;
+    border-radius: 10px;
+    opacity: 5.5;
+    transition: 0.8s;
+  }
+
+  .redes h2 {
+    font-size: xx-small;
+  }
+
+  .footer p {
+    font-size: 1em;
+  }
+}
