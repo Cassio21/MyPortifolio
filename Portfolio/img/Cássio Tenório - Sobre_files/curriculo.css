@@ -1,0 +1,327 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-image: url('../img/fundo-portfolio.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+}
+
+.navigation {
+  background-color: #3a7db0;
+  color: #fff;
+
+  animation-name: nav;
+  animation-duration: 5s;
+}
+
+.block-header--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.navigation .threeline-icon {
+  display: none;
+}
+
+.navigation ul {
+  list-style: none;
+  text-align: center;
+  align-items: center;
+  letter-spacing: 1.2rem;
+}
+
+.navigation li {
+  display: inline-block;
+  margin: 1.4em;
+  font-size: 16.5px;
+  font-weight: 100;
+}
+
+.link {
+  position: relative;
+  opacity: 1;
+  transition: opacity 0.6s;
+  color: #fff;
+  text-decoration: none;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #93dd93;
+  transition: width 0.6s;
+}
+
+.link:hover {
+  opacity: 0.9;
+  color: #f8ca6d;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.sup {
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 2.6rem;
+  border-bottom: solid thin #fff;
+  width: 268px;
+}
+
+.sup-udemy {
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 2.6rem;
+  border-bottom: solid thin #fff;
+  width: 95px;
+}
+
+.main {
+  padding: 5rem 11.25rem 5rem 6.25rem;
+
+  animation-name: conteudo;
+  animation-duration: 2s;
+}
+
+.meu-perfil {
+  float: right;
+  width: 12.7rem;
+  margin: 1.5rem 0;
+  border-radius: 1rem;
+}
+
+.main h1 {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0 2rem;
+  font-weight: normal;
+  color: #fff;
+}
+
+.main h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 0.1rem;
+  margin: 1.5rem 0;
+}
+
+.main h3 {
+  color: #f8ca6d;
+  font-size: 0.875em;
+  line-height: 1.5em;
+  border-bottom: solid thin #fff;
+  width: fit-content;
+  padding-top: 18px;
+  text-transform: uppercase;
+}
+
+.main p {
+  color: #fff;
+  font-size: 1.325em;
+  font-weight: 100;
+  line-height: 2.5rem;
+  text-align: inherit;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+}
+
+.caminho {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #66635b;
+}
+
+.caminho li {
+  font-size: 1.125em;
+  font-weight: 100;
+  color: #fff;
+  margin: 1rem 0;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.skills:hover {
+  box-shadow: inset -8px 0px 19px rgba(0, 0, 0, 0.2),
+    8px 0px 19px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  transition: 0.7s;
+}
+
+#vscode {
+  background-color: #000;
+  height: 50px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+#vscode:hover {
+  transform: scale(1.3);
+  transition: 0.7s;
+}
+
+.hard:hover {
+  transform: scale(1.3);
+  transition: 0.7s;
+}
+
+.soft {
+  list-style: none;
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.soft li {
+  margin-top: 1rem;
+  border-bottom: solid thin;
+  width: 12rem;
+}
+
+#end {
+  text-align: justify;
+  line-height: 2.6rem;
+  margin-top: 2rem;
+}
+
+.social-img {
+  margin-right: 1.5rem;
+  left: 0.5rem;
+}
+
+.social-img:hover {
+  transform: scale(1.3);
+  transition: 0.6s;
+}
+
+.back {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 3.125rem 31.25rem 0 30.375rem;
+}
+
+.back:hover {
+  background-color: #9eff9e;
+  color: #000;
+  border-radius: 10px;
+  opacity: 5.5;
+  transition: 0.8s;
+}
+
+.redes {
+  display: flex;
+  align-items: center;
+}
+
+.redes {
+  animation-name: redes;
+  animation-duration: 4.1s;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  color: #fff;
+}
+
+/*//* ANIMAÇÕES */
+@keyframes nav {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes conteudo {
+  0% {
+    opacity: 0;
+    transform: translate(-20px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(20px, 0);
+  }
+}
+
+@keyframes redes {
+  0% {
+    opacity: 0;
+    transform: translate(0, -25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+/* ? Responsividade */
+/* ! 1024px */
+@media screen and (maax-width: 1024) {
+  .main {
+    padding: 5rem 11.25rem 5rem 6.25rem;
+  }
+}
+
+/* !1000px */
+@media screen and (max-width: 1000px) {
+  .navigation li {
+    display: none;
+  }
+
+  .navigation .threeline-icon {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .caminho li {
+    font-size: 0.875em !important ;
+  }
+
+  .main {
+    padding: 3.6rem 5% 2.5rem 5%;
+  }
+
+  .main p {
+    text-align: left;
+    line-height: 2rem;
+  }
+
+  .meu-perfil {
+    float: none;
+    max-width: 100%;
+
+    border-radius: 1rem;
+  }
+}
